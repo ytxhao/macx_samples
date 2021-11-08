@@ -272,7 +272,7 @@ const AudioUnitElement outputBus = 0;
         NSLog(@"convert node element 0 connect to mixer node element 0 error:%d",statusCode);
         exit(1);
     }
-    if (_bgmFileURL == nil) {
+    if (_bgmFileURL != nil) {
         statusCode = AUGraphConnectNodeInput(_auGraph, _filePlayerNode, 0, _mixerNode, 1);
         if (statusCode != noErr) {
             NSLog(@"file player node element 0 connect to mixer node element 1 error:%d",statusCode);

@@ -57,12 +57,34 @@
     // Update the view, if already loaded.
 }
 
+- (NSString *) log_file_output_path {
+    NSString *pathString =
+        [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) firstObject];
+    if (pathString == nil) {
+      pathString = @"";
+    } else {
+      pathString = [NSString stringWithFormat:@"%@/ims", pathString];
+      NSFileManager *fileManager = [NSFileManager defaultManager];
+      if (![fileManager fileExistsAtPath:pathString]) {
+        if ([fileManager createDirectoryAtPath:pathString withIntermediateDirectories:YES attributes:nil error:nil] == NO) {
+          pathString = @"";
+        }
+      }
+    }
+    return pathString;
+}
+
 -(void)buttonClick:(id)sender
 {
     NSLog(@"buttonClick:%@",sender);
     NSString *path = [[NSBundle mainBundle] pathForResource:@"background.m4a" ofType:nil];
     NSLog(@"ViewController path:%@",path);
-    AudioUnitRecoder *audioUnitRecoder = new AudioUnitRecoder(48000, path.UTF8String, std::string("/Users/yuhao/qt_record.pcm"));
+//    AudioUnitRecoder *audioUnitRecoder = new AudioUnitRecoder(48000, path.UTF8String, std::string("/Users/yuhao/qt_record.pcm"));
+    NSString *recordPath = [NSString stringWithFormat:@"%@/qt_record.pcm",[self log_file_output_path]];
+    NSLog(@"ViewController recordPath:%@",recordPath);
+    AudioUnitRecoder *audioUnitRecoder = new AudioUnitRecoder(48000, path.UTF8String, recordPath.UTF8String);
+    
+    audioUnitRecoder->startRecording();
 }
 
 
