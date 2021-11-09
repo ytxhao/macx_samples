@@ -1,0 +1,634 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		66653D1B273A1ED700C25BF4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 66653D1A273A1ED700C25BF4 /* AppDelegate.m */; };
+		66653D1E273A1ED700C25BF4 /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 66653D1D273A1ED700C25BF4 /* ViewController.mm */; };
+		66653D20273A1ED900C25BF4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66653D1F273A1ED900C25BF4 /* Assets.xcassets */; };
+		66653D23273A1ED900C25BF4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66653D21273A1ED900C25BF4 /* Main.storyboard */; };
+		66653D26273A1ED900C25BF4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 66653D25273A1ED900C25BF4 /* main.m */; };
+		66653D31273A1ED900C25BF4 /* mac_recorderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 66653D30273A1ED900C25BF4 /* mac_recorderTests.m */; };
+		66653D3C273A1ED900C25BF4 /* mac_recorderUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 66653D3B273A1ED900C25BF4 /* mac_recorderUITests.m */; };
+		66653D51273A20EA00C25BF4 /* audio_unit_recoder.mm in Sources */ = {isa = PBXBuildFile; fileRef = 66653D50273A20E900C25BF4 /* audio_unit_recoder.mm */; };
+		66653D56273A211B00C25BF4 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66653D53273A211B00C25BF4 /* CoreAudio.framework */; };
+		66653D57273A211B00C25BF4 /* CoreAudioKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66653D54273A211B00C25BF4 /* CoreAudioKit.framework */; };
+		66653D58273A211B00C25BF4 /* AVFAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66653D55273A211B00C25BF4 /* AVFAudio.framework */; };
+		66653D5A273A213900C25BF4 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66653D59273A213900C25BF4 /* AudioToolbox.framework */; };
+		66653D5C273A214D00C25BF4 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66653D5B273A214D00C25BF4 /* AVFoundation.framework */; };
+		66653D60273A223E00C25BF4 /* background.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 66653D5F273A223E00C25BF4 /* background.m4a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		66653D2D273A1ED900C25BF4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 66653D0E273A1ED700C25BF4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 66653D15273A1ED700C25BF4;
+			remoteInfo = mac_recorder;
+		};
+		66653D38273A1ED900C25BF4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 66653D0E273A1ED700C25BF4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 66653D15273A1ED700C25BF4;
+			remoteInfo = mac_recorder;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		66653D16273A1ED700C25BF4 /* mac_recorder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mac_recorder.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		66653D19273A1ED700C25BF4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		66653D1A273A1ED700C25BF4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		66653D1C273A1ED700C25BF4 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		66653D1D273A1ED700C25BF4 /* ViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ViewController.mm; sourceTree = "<group>"; };
+		66653D1F273A1ED900C25BF4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		66653D22273A1ED900C25BF4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		66653D24273A1ED900C25BF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		66653D25273A1ED900C25BF4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		66653D27273A1ED900C25BF4 /* mac_recorder.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = mac_recorder.entitlements; sourceTree = "<group>"; };
+		66653D2C273A1ED900C25BF4 /* mac_recorderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = mac_recorderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		66653D30273A1ED900C25BF4 /* mac_recorderTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = mac_recorderTests.m; sourceTree = "<group>"; };
+		66653D32273A1ED900C25BF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		66653D37273A1ED900C25BF4 /* mac_recorderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = mac_recorderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		66653D3B273A1ED900C25BF4 /* mac_recorderUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = mac_recorderUITests.m; sourceTree = "<group>"; };
+		66653D3D273A1ED900C25BF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		66653D4F273A20E900C25BF4 /* audio_unit_recoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = audio_unit_recoder.h; sourceTree = "<group>"; };
+		66653D50273A20E900C25BF4 /* audio_unit_recoder.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = audio_unit_recoder.mm; sourceTree = "<group>"; };
+		66653D53273A211B00C25BF4 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
+		66653D54273A211B00C25BF4 /* CoreAudioKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudioKit.framework; path = System/Library/Frameworks/CoreAudioKit.framework; sourceTree = SDKROOT; };
+		66653D55273A211B00C25BF4 /* AVFAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFAudio.framework; path = System/Library/Frameworks/AVFAudio.framework; sourceTree = SDKROOT; };
+		66653D59273A213900C25BF4 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		66653D5B273A214D00C25BF4 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		66653D5F273A223E00C25BF4 /* background.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = background.m4a; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		66653D13273A1ED700C25BF4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66653D58273A211B00C25BF4 /* AVFAudio.framework in Frameworks */,
+				66653D56273A211B00C25BF4 /* CoreAudio.framework in Frameworks */,
+				66653D5C273A214D00C25BF4 /* AVFoundation.framework in Frameworks */,
+				66653D57273A211B00C25BF4 /* CoreAudioKit.framework in Frameworks */,
+				66653D5A273A213900C25BF4 /* AudioToolbox.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66653D29273A1ED900C25BF4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66653D34273A1ED900C25BF4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		66653D0D273A1ED700C25BF4 = {
+			isa = PBXGroup;
+			children = (
+				66653D18273A1ED700C25BF4 /* mac_recorder */,
+				66653D2F273A1ED900C25BF4 /* mac_recorderTests */,
+				66653D3A273A1ED900C25BF4 /* mac_recorderUITests */,
+				66653D17273A1ED700C25BF4 /* Products */,
+				66653D52273A211B00C25BF4 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		66653D17273A1ED700C25BF4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				66653D16273A1ED700C25BF4 /* mac_recorder.app */,
+				66653D2C273A1ED900C25BF4 /* mac_recorderTests.xctest */,
+				66653D37273A1ED900C25BF4 /* mac_recorderUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		66653D18273A1ED700C25BF4 /* mac_recorder */ = {
+			isa = PBXGroup;
+			children = (
+				66653D5D273A223E00C25BF4 /* Resource */,
+				66653D4F273A20E900C25BF4 /* audio_unit_recoder.h */,
+				66653D50273A20E900C25BF4 /* audio_unit_recoder.mm */,
+				66653D19273A1ED700C25BF4 /* AppDelegate.h */,
+				66653D1A273A1ED700C25BF4 /* AppDelegate.m */,
+				66653D1C273A1ED700C25BF4 /* ViewController.h */,
+				66653D1D273A1ED700C25BF4 /* ViewController.mm */,
+				66653D1F273A1ED900C25BF4 /* Assets.xcassets */,
+				66653D21273A1ED900C25BF4 /* Main.storyboard */,
+				66653D24273A1ED900C25BF4 /* Info.plist */,
+				66653D25273A1ED900C25BF4 /* main.m */,
+				66653D27273A1ED900C25BF4 /* mac_recorder.entitlements */,
+			);
+			path = mac_recorder;
+			sourceTree = "<group>";
+		};
+		66653D2F273A1ED900C25BF4 /* mac_recorderTests */ = {
+			isa = PBXGroup;
+			children = (
+				66653D30273A1ED900C25BF4 /* mac_recorderTests.m */,
+				66653D32273A1ED900C25BF4 /* Info.plist */,
+			);
+			path = mac_recorderTests;
+			sourceTree = "<group>";
+		};
+		66653D3A273A1ED900C25BF4 /* mac_recorderUITests */ = {
+			isa = PBXGroup;
+			children = (
+				66653D3B273A1ED900C25BF4 /* mac_recorderUITests.m */,
+				66653D3D273A1ED900C25BF4 /* Info.plist */,
+			);
+			path = mac_recorderUITests;
+			sourceTree = "<group>";
+		};
+		66653D52273A211B00C25BF4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				66653D5B273A214D00C25BF4 /* AVFoundation.framework */,
+				66653D59273A213900C25BF4 /* AudioToolbox.framework */,
+				66653D55273A211B00C25BF4 /* AVFAudio.framework */,
+				66653D53273A211B00C25BF4 /* CoreAudio.framework */,
+				66653D54273A211B00C25BF4 /* CoreAudioKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		66653D5D273A223E00C25BF4 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				66653D5E273A223E00C25BF4 /* Media */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		66653D5E273A223E00C25BF4 /* Media */ = {
+			isa = PBXGroup;
+			children = (
+				66653D5F273A223E00C25BF4 /* background.m4a */,
+			);
+			path = Media;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		66653D15273A1ED700C25BF4 /* mac_recorder */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 66653D40273A1ED900C25BF4 /* Build configuration list for PBXNativeTarget "mac_recorder" */;
+			buildPhases = (
+				66653D12273A1ED700C25BF4 /* Sources */,
+				66653D13273A1ED700C25BF4 /* Frameworks */,
+				66653D14273A1ED700C25BF4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = mac_recorder;
+			productName = mac_recorder;
+			productReference = 66653D16273A1ED700C25BF4 /* mac_recorder.app */;
+			productType = "com.apple.product-type.application";
+		};
+		66653D2B273A1ED900C25BF4 /* mac_recorderTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 66653D43273A1ED900C25BF4 /* Build configuration list for PBXNativeTarget "mac_recorderTests" */;
+			buildPhases = (
+				66653D28273A1ED900C25BF4 /* Sources */,
+				66653D29273A1ED900C25BF4 /* Frameworks */,
+				66653D2A273A1ED900C25BF4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				66653D2E273A1ED900C25BF4 /* PBXTargetDependency */,
+			);
+			name = mac_recorderTests;
+			productName = mac_recorderTests;
+			productReference = 66653D2C273A1ED900C25BF4 /* mac_recorderTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		66653D36273A1ED900C25BF4 /* mac_recorderUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 66653D46273A1ED900C25BF4 /* Build configuration list for PBXNativeTarget "mac_recorderUITests" */;
+			buildPhases = (
+				66653D33273A1ED900C25BF4 /* Sources */,
+				66653D34273A1ED900C25BF4 /* Frameworks */,
+				66653D35273A1ED900C25BF4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				66653D39273A1ED900C25BF4 /* PBXTargetDependency */,
+			);
+			name = mac_recorderUITests;
+			productName = mac_recorderUITests;
+			productReference = 66653D37273A1ED900C25BF4 /* mac_recorderUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		66653D0E273A1ED700C25BF4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					66653D15273A1ED700C25BF4 = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+					66653D2B273A1ED900C25BF4 = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = 66653D15273A1ED700C25BF4;
+					};
+					66653D36273A1ED900C25BF4 = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = 66653D15273A1ED700C25BF4;
+					};
+				};
+			};
+			buildConfigurationList = 66653D11273A1ED700C25BF4 /* Build configuration list for PBXProject "mac_recorder" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 66653D0D273A1ED700C25BF4;
+			productRefGroup = 66653D17273A1ED700C25BF4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				66653D15273A1ED700C25BF4 /* mac_recorder */,
+				66653D2B273A1ED900C25BF4 /* mac_recorderTests */,
+				66653D36273A1ED900C25BF4 /* mac_recorderUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		66653D14273A1ED700C25BF4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66653D60273A223E00C25BF4 /* background.m4a in Resources */,
+				66653D20273A1ED900C25BF4 /* Assets.xcassets in Resources */,
+				66653D23273A1ED900C25BF4 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66653D2A273A1ED900C25BF4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66653D35273A1ED900C25BF4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		66653D12273A1ED700C25BF4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66653D1E273A1ED700C25BF4 /* ViewController.mm in Sources */,
+				66653D51273A20EA00C25BF4 /* audio_unit_recoder.mm in Sources */,
+				66653D26273A1ED900C25BF4 /* main.m in Sources */,
+				66653D1B273A1ED700C25BF4 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66653D28273A1ED900C25BF4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66653D31273A1ED900C25BF4 /* mac_recorderTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66653D33273A1ED900C25BF4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66653D3C273A1ED900C25BF4 /* mac_recorderUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		66653D2E273A1ED900C25BF4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 66653D15273A1ED700C25BF4 /* mac_recorder */;
+			targetProxy = 66653D2D273A1ED900C25BF4 /* PBXContainerItemProxy */;
+		};
+		66653D39273A1ED900C25BF4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 66653D15273A1ED700C25BF4 /* mac_recorder */;
+			targetProxy = 66653D38273A1ED900C25BF4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		66653D21273A1ED900C25BF4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				66653D22273A1ED900C25BF4 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		66653D3E273A1ED900C25BF4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		66653D3F273A1ED900C25BF4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		66653D41273A1ED900C25BF4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = mac_recorder/mac_recorder.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = KFSKA2NQKM;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = mac_recorder/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "starmaker.mac-recorder";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		66653D42273A1ED900C25BF4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = mac_recorder/mac_recorder.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = KFSKA2NQKM;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = mac_recorder/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "starmaker.mac-recorder";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		66653D44273A1ED900C25BF4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = KFSKA2NQKM;
+				INFOPLIST_FILE = mac_recorderTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.2;
+				PRODUCT_BUNDLE_IDENTIFIER = "starmaker.mac-recorderTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/mac_recorder.app/Contents/MacOS/mac_recorder";
+			};
+			name = Debug;
+		};
+		66653D45273A1ED900C25BF4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = KFSKA2NQKM;
+				INFOPLIST_FILE = mac_recorderTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.2;
+				PRODUCT_BUNDLE_IDENTIFIER = "starmaker.mac-recorderTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/mac_recorder.app/Contents/MacOS/mac_recorder";
+			};
+			name = Release;
+		};
+		66653D47273A1ED900C25BF4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = KFSKA2NQKM;
+				INFOPLIST_FILE = mac_recorderUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "starmaker.mac-recorderUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = mac_recorder;
+			};
+			name = Debug;
+		};
+		66653D48273A1ED900C25BF4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = KFSKA2NQKM;
+				INFOPLIST_FILE = mac_recorderUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "starmaker.mac-recorderUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = mac_recorder;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		66653D11273A1ED700C25BF4 /* Build configuration list for PBXProject "mac_recorder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				66653D3E273A1ED900C25BF4 /* Debug */,
+				66653D3F273A1ED900C25BF4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		66653D40273A1ED900C25BF4 /* Build configuration list for PBXNativeTarget "mac_recorder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				66653D41273A1ED900C25BF4 /* Debug */,
+				66653D42273A1ED900C25BF4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		66653D43273A1ED900C25BF4 /* Build configuration list for PBXNativeTarget "mac_recorderTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				66653D44273A1ED900C25BF4 /* Debug */,
+				66653D45273A1ED900C25BF4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		66653D46273A1ED900C25BF4 /* Build configuration list for PBXNativeTarget "mac_recorderUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				66653D47273A1ED900C25BF4 /* Debug */,
+				66653D48273A1ED900C25BF4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 66653D0E273A1ED700C25BF4 /* Project object */;
+}

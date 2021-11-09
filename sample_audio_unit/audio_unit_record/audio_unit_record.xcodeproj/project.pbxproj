@@ -180,7 +180,8 @@
 			children = (
 				66F12199273528F800783A3F /* Media */,
 			);
-			path = Resource;
+			name = Resource;
+			path = ../../mac_recorder/mac_recorder/Resource;
 			sourceTree = "<group>";
 		};
 		66F12199273528F800783A3F /* Media */ = {

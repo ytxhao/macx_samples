@@ -28,5 +28,7 @@
 	<string>NSApplication</string>
 	<key>NSMicrophoneUsageDescription</key>
 	<string>use Your micphone</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Grant IMS access to the camera for video recordings.</string>
 </dict>
 </plist>

@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:mac_recorder/mac_recorder.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:audio_unit_record/audio_unit_record.xcodeproj">
    </FileRef>
 </Workspace>

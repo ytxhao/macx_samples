@@ -4,7 +4,8 @@
 //
 //  Created by yuhao on 2021/11/5.
 //
-#import <foundation/Foundation.h>
+#import <Foundation/Foundation.h>
+#import <AVFoundation/AVFoundation.h>
 #import "ViewController.h"
 #import "audio_unit_recoder.h"
 
@@ -76,16 +77,63 @@
 
 -(void)buttonClick:(id)sender
 {
+    // macos 10.14以上系统才执行
+    if(@available(macos 10.14, *))
+    {
+        // 请求摄像机授权，v如果是麦克风的话参数是AVMediaTypeAudio.
+//        [AVCaptureDevice devicesWithMediaType:AVMediaTypeAudio];
+//        AVAuthorizationStatus status = [AVCaptureDevice authorizationStatusForMediaType:AVMediaTypeAudio];
+        switch ([AVCaptureDevice authorizationStatusForMediaType:AVMediaTypeAudio])
+        {
+            case AVAuthorizationStatusAuthorized:
+            {
+                // 已经授权同意.
+                [self setupCaptureSession];
+                break;
+            }
+            case AVAuthorizationStatusNotDetermined:
+            {
+                // 从未处理过授权
+                [AVCaptureDevice requestAccessForMediaType:AVMediaTypeAudio completionHandler:^(BOOL granted) {
+                    if (granted) {
+                        [self setupCaptureSession];
+                    }
+                }];
+                break;
+            }
+            case AVAuthorizationStatusDenied:
+            {
+                // 授权拒绝
+                return;
+            }
+            case AVAuthorizationStatusRestricted:
+            {
+                // 家长管制等
+                return;
+            }
+        }
+    }
     NSLog(@"buttonClick:%@",sender);
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"background.m4a" ofType:nil];
-    NSLog(@"ViewController path:%@",path);
-//    AudioUnitRecoder *audioUnitRecoder = new AudioUnitRecoder(48000, path.UTF8String, std::string("/Users/yuhao/qt_record.pcm"));
-    NSString *recordPath = [NSString stringWithFormat:@"%@/qt_record.pcm",[self log_file_output_path]];
-    NSLog(@"ViewController recordPath:%@",recordPath);
-    AudioUnitRecoder *audioUnitRecoder = new AudioUnitRecoder(48000, path.UTF8String, recordPath.UTF8String);
-    
-    audioUnitRecoder->startRecording();
+//    NSString *path = [[NSBundle mainBundle] pathForResource:@"background.m4a" ofType:nil];
+//    NSLog(@"ViewController path:%@",path);
+////    AudioUnitRecoder *audioUnitRecoder = new AudioUnitRecoder(48000, path.UTF8String, std::string("/Users/yuhao/qt_record.pcm"));
+//    NSString *recordPath = [NSString stringWithFormat:@"%@/qt_record.pcm",[self log_file_output_path]];
+//    NSLog(@"ViewController recordPath:%@",recordPath);
+//    AudioUnitRecoder *audioUnitRecoder = new AudioUnitRecoder(48000, path.UTF8String, recordPath.UTF8String);
+//
+//    audioUnitRecoder->startRecording();
 }
 
+- (void) setupCaptureSession {
+//        NSLog(@"buttonClick:%@",sender);
+        NSString *path = [[NSBundle mainBundle] pathForResource:@"background.m4a" ofType:nil];
+        NSLog(@"ViewController path:%@",path);
+    //    AudioUnitRecoder *audioUnitRecoder = new AudioUnitRecoder(48000, path.UTF8String, std::string("/Users/yuhao/qt_record.pcm"));
+        NSString *recordPath = [NSString stringWithFormat:@"%@/qt_record.pcm",[self log_file_output_path]];
+        NSLog(@"ViewController recordPath:%@",recordPath);
+        AudioUnitRecoder *audioUnitRecoder = new AudioUnitRecoder(48000, path.UTF8String, recordPath.UTF8String);
+    
+        audioUnitRecoder->startRecording();
+}
 
 @end

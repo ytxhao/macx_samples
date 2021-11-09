@@ -1,6 +1,7 @@
 #import "audio_unit_recoder.h"
-#import <foundation/Foundation.h>
+#import <Foundation/Foundation.h>
 #import <AudioToolbox/AudioToolbox.h>
+#import <AVFoundation/AVFoundation.h>
 
 const AudioUnitElement inputBus = 1;
 const AudioUnitElement outputBus = 0;
@@ -51,6 +52,7 @@ const AudioUnitElement outputBus = 0;
         self.sampleRate = sampleRate;
         self.fileURL = fileURL;
         self.bgmFileURL = bgmFileURL;
+//        [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayAndRecord error:nil];
         [self createAudioUnitGraph];
         [self setupFilePlayer];
     }
@@ -130,6 +132,7 @@ const AudioUnitElement outputBus = 0;
 }
 
 - (void)setupFilePlayer {
+    return ;
     if (_bgmFileURL == nil) {
         return;
     }
@@ -290,18 +293,7 @@ const AudioUnitElement outputBus = 0;
 }
 
 - (void)setAudioUnitsProperties {
-    UInt32 enableIO = 1;
-    OSStatus statusCode = AudioUnitSetProperty(_ioUnit,
-                                          kAudioOutputUnitProperty_EnableIO,
-                                          kAudioUnitScope_Input,
-                                          inputBus,
-                                          &enableIO,
-                                          sizeof(enableIO));
-    if (statusCode != noErr) {
-        NSLog(@"Could not enable I/O for I/O unit input element 1 error:%d",statusCode);
-       exit(1);
-    }
-
+    OSStatus statusCode;
     UInt32 bytesPerSample = 2;
     AudioStreamBasicDescription stereoStreamFormat;
     bzero(&stereoStreamFormat, sizeof(stereoStreamFormat));
@@ -313,7 +305,19 @@ const AudioUnitElement outputBus = 0;
     stereoStreamFormat.mBytesPerFrame = bytesPerSample * 2;
     stereoStreamFormat.mFramesPerPacket = 1;
     stereoStreamFormat.mBytesPerPacket = stereoStreamFormat.mBytesPerFrame;
-
+//#if TARGET_OS_IPHONE
+    UInt32 enableIO = 1;
+    statusCode = AudioUnitSetProperty(_ioUnit,
+                                          kAudioOutputUnitProperty_EnableIO,
+                                          kAudioUnitScope_Input,
+                                          inputBus,
+                                          &enableIO,
+                                          sizeof(enableIO));
+    if (statusCode != noErr) {
+        NSLog(@"Could not enable I/O for I/O unit input element 1 error:%d",statusCode);
+       exit(1);
+    }
+//#endif
     statusCode = AudioUnitSetProperty(_ioUnit,
                                       kAudioUnitProperty_StreamFormat,
                                       kAudioUnitScope_Output,
