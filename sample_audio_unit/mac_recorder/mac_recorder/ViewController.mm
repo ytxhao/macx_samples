@@ -7,7 +7,7 @@
 #import <Foundation/Foundation.h>
 #import <AVFoundation/AVFoundation.h>
 #import "ViewController.h"
-#import "audio_unit_recoder.h"
+#import "mac_recoder.h"
 
 @interface ViewController()
 
@@ -131,9 +131,9 @@
     //    AudioUnitRecoder *audioUnitRecoder = new AudioUnitRecoder(48000, path.UTF8String, std::string("/Users/yuhao/qt_record.pcm"));
         NSString *recordPath = [NSString stringWithFormat:@"%@/qt_record.pcm",[self log_file_output_path]];
         NSLog(@"ViewController recordPath:%@",recordPath);
-        AudioUnitRecoder *audioUnitRecoder = new AudioUnitRecoder(48000, path.UTF8String, recordPath.UTF8String);
+    MacRecoder *macRecoder = new MacRecoder(48000, path.UTF8String, recordPath.UTF8String);
     
-        audioUnitRecoder->startRecording();
+        macRecoder->startRecording();
 }
 
 @end

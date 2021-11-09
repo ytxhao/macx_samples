@@ -14,7 +14,7 @@
 		66653D26273A1ED900C25BF4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 66653D25273A1ED900C25BF4 /* main.m */; };
 		66653D31273A1ED900C25BF4 /* mac_recorderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 66653D30273A1ED900C25BF4 /* mac_recorderTests.m */; };
 		66653D3C273A1ED900C25BF4 /* mac_recorderUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 66653D3B273A1ED900C25BF4 /* mac_recorderUITests.m */; };
-		66653D51273A20EA00C25BF4 /* audio_unit_recoder.mm in Sources */ = {isa = PBXBuildFile; fileRef = 66653D50273A20E900C25BF4 /* audio_unit_recoder.mm */; };
+		66653D51273A20EA00C25BF4 /* mac_recoder.mm in Sources */ = {isa = PBXBuildFile; fileRef = 66653D50273A20E900C25BF4 /* mac_recoder.mm */; };
 		66653D56273A211B00C25BF4 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66653D53273A211B00C25BF4 /* CoreAudio.framework */; };
 		66653D57273A211B00C25BF4 /* CoreAudioKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66653D54273A211B00C25BF4 /* CoreAudioKit.framework */; };
 		66653D58273A211B00C25BF4 /* AVFAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66653D55273A211B00C25BF4 /* AVFAudio.framework */; };
@@ -57,8 +57,8 @@
 		66653D37273A1ED900C25BF4 /* mac_recorderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = mac_recorderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		66653D3B273A1ED900C25BF4 /* mac_recorderUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = mac_recorderUITests.m; sourceTree = "<group>"; };
 		66653D3D273A1ED900C25BF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		66653D4F273A20E900C25BF4 /* audio_unit_recoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = audio_unit_recoder.h; sourceTree = "<group>"; };
-		66653D50273A20E900C25BF4 /* audio_unit_recoder.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = audio_unit_recoder.mm; sourceTree = "<group>"; };
+		66653D4F273A20E900C25BF4 /* mac_recoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mac_recoder.h; sourceTree = "<group>"; };
+		66653D50273A20E900C25BF4 /* mac_recoder.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = mac_recoder.mm; sourceTree = "<group>"; };
 		66653D53273A211B00C25BF4 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
 		66653D54273A211B00C25BF4 /* CoreAudioKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudioKit.framework; path = System/Library/Frameworks/CoreAudioKit.framework; sourceTree = SDKROOT; };
 		66653D55273A211B00C25BF4 /* AVFAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFAudio.framework; path = System/Library/Frameworks/AVFAudio.framework; sourceTree = SDKROOT; };
@@ -122,8 +122,8 @@
 			isa = PBXGroup;
 			children = (
 				66653D5D273A223E00C25BF4 /* Resource */,
-				66653D4F273A20E900C25BF4 /* audio_unit_recoder.h */,
-				66653D50273A20E900C25BF4 /* audio_unit_recoder.mm */,
+				66653D4F273A20E900C25BF4 /* mac_recoder.h */,
+				66653D50273A20E900C25BF4 /* mac_recoder.mm */,
 				66653D19273A1ED700C25BF4 /* AppDelegate.h */,
 				66653D1A273A1ED700C25BF4 /* AppDelegate.m */,
 				66653D1C273A1ED700C25BF4 /* ViewController.h */,
@@ -313,7 +313,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				66653D1E273A1ED700C25BF4 /* ViewController.mm in Sources */,
-				66653D51273A20EA00C25BF4 /* audio_unit_recoder.mm in Sources */,
+				66653D51273A20EA00C25BF4 /* mac_recoder.mm in Sources */,
 				66653D26273A1ED900C25BF4 /* main.m in Sources */,
 				66653D1B273A1ED700C25BF4 /* AppDelegate.m in Sources */,
 			);

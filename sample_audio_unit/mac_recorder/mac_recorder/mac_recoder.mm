@@ -1,4 +1,4 @@
-#import "audio_unit_recoder.h"
+#import "mac_recoder.h"
 #import <Foundation/Foundation.h>
 #import <AudioToolbox/AudioToolbox.h>
 #import <AVFoundation/AVFoundation.h>
@@ -477,7 +477,7 @@ static OSStatus renderCallback(void *inRefCon, AudioUnitRenderActionFlags *ioAct
 
 @end
 
-AudioUnitRecoder::AudioUnitRecoder(int sample_rate, const std::string& bgm_file_url, const std::string& file_url)
+MacRecoder::MacRecoder(int sample_rate, const std::string& bgm_file_url, const std::string& file_url)
 {
     this->sample_rate_ = sample_rate;
     this->bgm_file_url_ = bgm_file_url;
@@ -490,22 +490,22 @@ AudioUnitRecoder::AudioUnitRecoder(int sample_rate, const std::string& bgm_file_
 //     bgmFileURL:[NSURL fileURLWithPath:nss_bgm_file_url]];
 }
 
-AudioUnitRecoder::~AudioUnitRecoder() {
+MacRecoder::~MacRecoder() {
 
 }
 
-void AudioUnitRecoder::startRecording() {
+void MacRecoder::startRecording() {
 //    NSString *path = [[NSBundle mainBundle] pathForResource:@"xxx" ofType:@"bundle"];
 //    qDebug()<<"startRecording path:"<<path;
     [audio_engine_ startRecording];
 }
 
-void AudioUnitRecoder::stopRecording() {
+void MacRecoder::stopRecording() {
     [audio_engine_ stopRecording];
 }
 
 
-int AudioUnitRecoder::InitRecoder(int sample_rate,const std::string& fileURL, const std::string& bgmFileURL) {
+int MacRecoder::InitRecoder(int sample_rate,const std::string& fileURL, const std::string& bgmFileURL) {
     return 0;
 }
 
