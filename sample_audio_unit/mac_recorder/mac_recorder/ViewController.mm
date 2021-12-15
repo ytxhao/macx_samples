@@ -133,7 +133,7 @@
         NSLog(@"ViewController recordPath:%@",recordPath);
     MacRecoder *macRecoder = new MacRecoder(48000, path.UTF8String, recordPath.UTF8String);
     
-        macRecoder->startRecording();
+        macRecoder->StartRecording();
 }
 
 @end
