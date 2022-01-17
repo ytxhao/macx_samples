@@ -10,6 +10,30 @@
 		665BEC3027699570001E1828 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 665BEC2F27699570001E1828 /* main.m */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		665E0F462795844B00BB38F2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 665E0F402795844A00BB38F2 /* producerconsumer.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 665E0F0E279583ED00BB38F2;
+			remoteInfo = producerconsumer;
+		};
+		665E0F482795844B00BB38F2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 665E0F402795844A00BB38F2 /* producerconsumer.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 665E0F23279583EE00BB38F2;
+			remoteInfo = producerconsumerTests;
+		};
+		665E0F4A2795844B00BB38F2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 665E0F402795844A00BB38F2 /* producerconsumer.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 665E0F2D279583EE00BB38F2;
+			remoteInfo = producerconsumerUITests;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXCopyFilesBuildPhase section */
 		665BEC2A27699570001E1828 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -25,6 +49,7 @@
 /* Begin PBXFileReference section */
 		665BEC2C27699570001E1828 /* multithread */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = multithread; sourceTree = BUILT_PRODUCTS_DIR; };
 		665BEC2F27699570001E1828 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		665E0F402795844A00BB38F2 /* producerconsumer.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = producerconsumer.xcodeproj; path = ../../producer_consumer/producerconsumer/producerconsumer.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +66,7 @@
 		665BEC2327699570001E1828 = {
 			isa = PBXGroup;
 			children = (
+				665E0F402795844A00BB38F2 /* producerconsumer.xcodeproj */,
 				665BEC2E27699570001E1828 /* multithread */,
 				665BEC2D27699570001E1828 /* Products */,
 			);
@@ -60,6 +86,16 @@
 				665BEC2F27699570001E1828 /* main.m */,
 			);
 			path = multithread;
+			sourceTree = "<group>";
+		};
+		665E0F412795844B00BB38F2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				665E0F472795844B00BB38F2 /* producerconsumer.app */,
+				665E0F492795844B00BB38F2 /* producerconsumerTests.xctest */,
+				665E0F4B2795844B00BB38F2 /* producerconsumerUITests.xctest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -106,12 +142,42 @@
 			mainGroup = 665BEC2327699570001E1828;
 			productRefGroup = 665BEC2D27699570001E1828 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 665E0F412795844B00BB38F2 /* Products */;
+					ProjectRef = 665E0F402795844A00BB38F2 /* producerconsumer.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				665BEC2B27699570001E1828 /* multithread */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		665E0F472795844B00BB38F2 /* producerconsumer.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = producerconsumer.app;
+			remoteRef = 665E0F462795844B00BB38F2 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		665E0F492795844B00BB38F2 /* producerconsumerTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = producerconsumerTests.xctest;
+			remoteRef = 665E0F482795844B00BB38F2 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		665E0F4B2795844B00BB38F2 /* producerconsumerUITests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = producerconsumerUITests.xctest;
+			remoteRef = 665E0F4A2795844B00BB38F2 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXSourcesBuildPhase section */
 		665BEC2827699570001E1828 /* Sources */ = {

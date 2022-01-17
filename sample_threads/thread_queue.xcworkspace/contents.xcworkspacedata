@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:producer_consumer/producerconsumer/producerconsumer.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:multi_thread/multithread/multithread.xcodeproj">
    </FileRef>
 </Workspace>
