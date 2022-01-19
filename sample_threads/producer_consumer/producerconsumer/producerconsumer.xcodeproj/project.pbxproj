@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		661830012797F1600018518D /* IMSRunnableImp.m in Sources */ = {isa = PBXBuildFile; fileRef = 661830002797F1600018518D /* IMSRunnableImp.m */; };
 		665E0F13279583ED00BB38F2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 665E0F12279583ED00BB38F2 /* AppDelegate.m */; };
 		665E0F16279583ED00BB38F2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 665E0F15279583ED00BB38F2 /* ViewController.m */; };
 		665E0F18279583EE00BB38F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 665E0F17279583EE00BB38F2 /* Assets.xcassets */; };
@@ -15,6 +16,8 @@
 		665E0F28279583EE00BB38F2 /* producerconsumerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 665E0F27279583EE00BB38F2 /* producerconsumerTests.m */; };
 		665E0F32279583EE00BB38F2 /* producerconsumerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 665E0F31279583EE00BB38F2 /* producerconsumerUITests.m */; };
 		665E0F34279583EE00BB38F2 /* producerconsumerUITestsLaunchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 665E0F33279583EE00BB38F2 /* producerconsumerUITestsLaunchTests.m */; };
+		666C48FC279660D000A8497D /* IMSMessagingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 666C48FB279660D000A8497D /* IMSMessagingController.m */; };
+		666C48FF27966D6F00A8497D /* IMSQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 666C48FE27966D6F00A8497D /* IMSQueue.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +38,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		66182FFC2797EA7F0018518D /* IMSRunnable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IMSRunnable.h; sourceTree = "<group>"; };
+		66182FFF2797F1600018518D /* IMSRunnableImp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IMSRunnableImp.h; sourceTree = "<group>"; };
+		661830002797F1600018518D /* IMSRunnableImp.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IMSRunnableImp.m; sourceTree = "<group>"; };
 		665E0F0E279583ED00BB38F2 /* producerconsumer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = producerconsumer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		665E0F11279583ED00BB38F2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		665E0F12279583ED00BB38F2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -49,6 +55,10 @@
 		665E0F2D279583EE00BB38F2 /* producerconsumerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = producerconsumerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		665E0F31279583EE00BB38F2 /* producerconsumerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = producerconsumerUITests.m; sourceTree = "<group>"; };
 		665E0F33279583EE00BB38F2 /* producerconsumerUITestsLaunchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = producerconsumerUITestsLaunchTests.m; sourceTree = "<group>"; };
+		666C48FA279660D000A8497D /* IMSMessagingController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IMSMessagingController.h; sourceTree = "<group>"; };
+		666C48FB279660D000A8497D /* IMSMessagingController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IMSMessagingController.m; sourceTree = "<group>"; };
+		666C48FD27966D6F00A8497D /* IMSQueue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IMSQueue.h; sourceTree = "<group>"; };
+		666C48FE27966D6F00A8497D /* IMSQueue.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IMSQueue.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +117,13 @@
 				665E0F19279583EE00BB38F2 /* Main.storyboard */,
 				665E0F1C279583EE00BB38F2 /* main.m */,
 				665E0F1E279583EE00BB38F2 /* producerconsumer.entitlements */,
+				666C48FA279660D000A8497D /* IMSMessagingController.h */,
+				666C48FB279660D000A8497D /* IMSMessagingController.m */,
+				666C48FD27966D6F00A8497D /* IMSQueue.h */,
+				666C48FE27966D6F00A8497D /* IMSQueue.m */,
+				66182FFC2797EA7F0018518D /* IMSRunnable.h */,
+				66182FFF2797F1600018518D /* IMSRunnableImp.h */,
+				661830002797F1600018518D /* IMSRunnableImp.m */,
 			);
 			path = producerconsumer;
 			sourceTree = "<group>";
@@ -258,8 +275,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				665E0F16279583ED00BB38F2 /* ViewController.m in Sources */,
+				661830012797F1600018518D /* IMSRunnableImp.m in Sources */,
 				665E0F1D279583EE00BB38F2 /* main.m in Sources */,
+				666C48FC279660D000A8497D /* IMSMessagingController.m in Sources */,
 				665E0F13279583ED00BB38F2 /* AppDelegate.m in Sources */,
+				666C48FF27966D6F00A8497D /* IMSQueue.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
