@@ -8,8 +8,10 @@
 #import <Foundation/Foundation.h>
 
 @protocol IMSRunnable <NSObject>
-@required
+@optional
+- (void)setRunnableQueueSize:(NSInteger)size;
 
+@required
 - (void)run;
 
 @end

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		661830012797F1600018518D /* IMSRunnableImp.m in Sources */ = {isa = PBXBuildFile; fileRef = 661830002797F1600018518D /* IMSRunnableImp.m */; };
+		662950CD279983E0009308E6 /* IMSActionTrackerRunable.m in Sources */ = {isa = PBXBuildFile; fileRef = 662950CC279983E0009308E6 /* IMSActionTrackerRunable.m */; };
 		665E0F13279583ED00BB38F2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 665E0F12279583ED00BB38F2 /* AppDelegate.m */; };
 		665E0F16279583ED00BB38F2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 665E0F15279583ED00BB38F2 /* ViewController.m */; };
 		665E0F18279583EE00BB38F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 665E0F17279583EE00BB38F2 /* Assets.xcassets */; };
@@ -41,6 +42,8 @@
 		66182FFC2797EA7F0018518D /* IMSRunnable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IMSRunnable.h; sourceTree = "<group>"; };
 		66182FFF2797F1600018518D /* IMSRunnableImp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IMSRunnableImp.h; sourceTree = "<group>"; };
 		661830002797F1600018518D /* IMSRunnableImp.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IMSRunnableImp.m; sourceTree = "<group>"; };
+		662950CB279983E0009308E6 /* IMSActionTrackerRunable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IMSActionTrackerRunable.h; sourceTree = "<group>"; };
+		662950CC279983E0009308E6 /* IMSActionTrackerRunable.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IMSActionTrackerRunable.m; sourceTree = "<group>"; };
 		665E0F0E279583ED00BB38F2 /* producerconsumer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = producerconsumer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		665E0F11279583ED00BB38F2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		665E0F12279583ED00BB38F2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -124,6 +127,8 @@
 				66182FFC2797EA7F0018518D /* IMSRunnable.h */,
 				66182FFF2797F1600018518D /* IMSRunnableImp.h */,
 				661830002797F1600018518D /* IMSRunnableImp.m */,
+				662950CB279983E0009308E6 /* IMSActionTrackerRunable.h */,
+				662950CC279983E0009308E6 /* IMSActionTrackerRunable.m */,
 			);
 			path = producerconsumer;
 			sourceTree = "<group>";
@@ -276,6 +281,7 @@
 			files = (
 				665E0F16279583ED00BB38F2 /* ViewController.m in Sources */,
 				661830012797F1600018518D /* IMSRunnableImp.m in Sources */,
+				662950CD279983E0009308E6 /* IMSActionTrackerRunable.m in Sources */,
 				665E0F1D279583EE00BB38F2 /* main.m in Sources */,
 				666C48FC279660D000A8497D /* IMSMessagingController.m in Sources */,
 				665E0F13279583ED00BB38F2 /* AppDelegate.m in Sources */,

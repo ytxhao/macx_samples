@@ -11,7 +11,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface IMSMessagingController : NSObject
 
-- (void)put:(void(^)(void))runable;
+- (void)put:(void(^)(NSInteger))runable;
 - (void)stop;
 
 @end

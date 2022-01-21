@@ -34,12 +34,15 @@
     while (!self.stopped) {
         NSLog(@"IMSMessagingController size:%td",[self.queuedCommands count]);
         id<IMSRunnable> command = [self.queuedCommands take];
+        if ([command respondsToSelector:@selector(setRunnableQueueSize:)]) {
+            [command setRunnableQueueSize:[self.queuedCommands count]];
+        }
         [command run];
     }
 }
 
-- (void)put:(void(^)(void))runable{
-    IMSRunnableImp *runnableImp = [[IMSRunnableImp alloc] initWithBlock:runable];
+- (void)put:(void(^)(NSInteger))runable{
+    IMSRunnableImp *runnableImp = [[IMSRunnableImp alloc] initWithQueueSizeBlock:runable];
     [self.queuedCommands put:runnableImp];
 }
 

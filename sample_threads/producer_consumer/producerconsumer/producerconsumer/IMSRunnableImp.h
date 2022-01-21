@@ -12,6 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface IMSRunnableImp : NSObject <IMSRunnable>
 - (id)initWithBlock:(void(^)(void))block;
+- (id)initWithQueueSizeBlock:(void(^)(NSInteger))block;
 @end
 
 NS_ASSUME_NONNULL_END

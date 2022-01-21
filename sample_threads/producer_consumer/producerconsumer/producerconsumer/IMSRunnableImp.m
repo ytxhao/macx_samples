@@ -8,7 +8,9 @@
 #import "IMSRunnableImp.h"
 
 @interface IMSRunnableImp()
+@property (nonatomic, assign) NSInteger queueSize;
 @property (nonatomic, copy) void(^runBlock)(void);
+@property (nonatomic, copy) void(^runQueueSizeBlock)(NSInteger);
 @end
 
 @implementation IMSRunnableImp
@@ -18,7 +20,19 @@
     self = [super init];
     if(self)
     {
+        self.queueSize = 0;
         self.runBlock = block;
+    }
+    NSLog(@"IMSRunnableImp init %@", self);
+    return self;
+}
+
+- (id)initWithQueueSizeBlock:(void(^)(NSInteger))block {
+    self = [super init];
+    if(self)
+    {
+        self.queueSize = 0;
+        self.runQueueSizeBlock = block;
     }
     NSLog(@"IMSRunnableImp init %@", self);
     return self;
@@ -34,6 +48,15 @@
         NSLog(@"IMSRunnableImp runBlock %@", self);
         self.runBlock();
     }
+    
+    if (self.runQueueSizeBlock != nil) {
+        NSLog(@"IMSRunnableImp runQueueSizeBlock %@", self);
+        self.runQueueSizeBlock(self.queueSize);
+    }
+}
+
+- (void)setRunnableQueueSize:(NSInteger)size {
+    self.queueSize = size;
 }
 
 @end
