@@ -15,11 +15,9 @@
 
 @implementation IMSRunnableImp
 
-- (id)initWithBlock:(void(^)(void))block
-{
+- (id)initWithBlock:(void(^)(void))block {
     self = [super init];
-    if(self)
-    {
+    if(self) {
         self.queueSize = 0;
         self.runBlock = block;
     }
@@ -29,8 +27,7 @@
 
 - (id)initWithQueueSizeBlock:(void(^)(NSInteger))block {
     self = [super init];
-    if(self)
-    {
+    if(self) {
         self.queueSize = 0;
         self.runQueueSizeBlock = block;
     }

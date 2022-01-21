@@ -10,7 +10,6 @@
 #define DEFAULT_INITIAL_CAPACITY 200
 @interface IMSQueue()
 @property (nonatomic, strong) NSMutableArray *queue;
-//@property (nonatomic, strong) NSLock *lock;
 @property (nonatomic, strong) NSCondition *notEmpty;
 @property (nonatomic, assign) NSInteger size;
 
@@ -19,14 +18,12 @@
 
 @implementation IMSQueue
 
-- (id)init
-{
+- (id)init {
     NSLog(@"IMSQueue init");
     self = [super init];
     if(self)
     {
         self.queue = [[NSMutableArray alloc] init];
-//        self.lock = [[NSLock alloc] init];
         self.notEmpty = [[NSCondition alloc] init];
         self.size = 0;
     }
@@ -36,11 +33,6 @@
 - (void)dealloc {
     NSLog(@"IMSQueue dealloc");
 }
-
-//- (void)enqueue:(id)object {
-//    [self.queue addObject:object];
-//    self.count = self.queue.count;
-//}
 
 - (BOOL)offer:(id)object {
     BOOL ret = NO;

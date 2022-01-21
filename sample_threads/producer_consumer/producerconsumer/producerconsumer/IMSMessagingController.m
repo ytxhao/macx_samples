@@ -41,7 +41,7 @@
     }
 }
 
-- (void)put:(void(^)(NSInteger))runable{
+- (void)put:(void(^)(NSInteger))runable {
     IMSRunnableImp *runnableImp = [[IMSRunnableImp alloc] initWithQueueSizeBlock:runable];
     [self.queuedCommands put:runnableImp];
 }
